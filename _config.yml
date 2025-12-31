@@ -1,0 +1,33 @@
+# Jekyll Configuration for GitHub Pages
+
+title: Aparna RVM
+description: Cognitive Scientist, AI Researcher, and Neuro-AI Entrepreneur
+author: Aparna RVM
+email: aparnarvmd@gmail.com
+url: https://aparnarvm.github.io
+baseurl: ""
+
+# Theme - using minima theme which is included with GitHub Pages
+theme: minima
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title.html
+
+# Social media links
+social:
+  links:
+    - https://linkedin.com/in/aparna-rvm-876b621ab
+    - https://github.com/aparnarvm
+
+# Plugins for GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude these files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
