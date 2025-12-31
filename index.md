@@ -50,6 +50,8 @@ My research explores fundamental questions:
 
 I am always open to connecting with fellow researchers, potential collaborators, and anyone passionate about the future of neurotechnology.
 
+**Personal Website:** [https://aparnarvm.com](https://aparnarvm.com)
+
 **LinkedIn:** [https://www.linkedin.com/in/aparna-rvm-876b621ab](https://www.linkedin.com/in/aparna-rvm-876b621ab)
 
 **Company:** [NeuMe Neurotech](https://neu-me-cogni-link-51f4ec5b.base44.app)
