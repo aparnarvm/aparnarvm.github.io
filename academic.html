@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio | Aparna RVM</title>
+    <meta name="description" content="Academic Portfolio of Aparna RVM - Research in Cognitive Science, AI/Data Science, and Neuroscience">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        terracotta: '#c4704a',
+                        'terracotta-dark': '#a85d3b',
+                        sage: '#9caf88',
+                        'sage-light': '#b8c9a9',
+                        cream: '#f5f0e8',
+                        'cream-dark': '#e8e0d4',
+                        'warm-brown': '#5c4033',
+                        'warm-brown-light': '#7a5a47',
+                    },
+                    fontFamily: {
+                        serif: ['Crimson Pro', 'Georgia', 'serif'],
+                        sans: ['Nunito', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: #f5f0e8;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239caf88' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .blob-shape { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .blob-shape-2 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        .organic-shadow { box-shadow: 0 10px 40px -10px rgba(92, 64, 51, 0.2); }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -15px rgba(92, 64, 51, 0.3);
+        }
+    </style>
+</head>
+<body class="font-sans text-warm-brown antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-sage/20">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-serif text-2xl font-semibold text-terracotta">Aparna</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-warm-brown hover:text-terracotta transition-colors font-medium">Home</a>
+                    <a href="academic.html" class="text-terracotta font-medium">Academic</a>
+                    <a href="creative.html" class="text-warm-brown hover:text-terracotta transition-colors font-medium">Creative</a>
+                    <a href="index.html#contact" class="bg-terracotta text-cream px-5 py-2 rounded-full hover:bg-terracotta-dark transition-colors font-medium">Connect</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-warm-brown">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-sage/20 pt-4">
+                <div class="flex flex-col gap-4">
+                    <a href="index.html" class="text-warm-brown hover:text-terracotta transition-colors font-medium">Home</a>
+                    <a href="academic.html" class="text-terracotta font-medium">Academic</a>
+                    <a href="creative.html" class="text-warm-brown hover:text-terracotta transition-colors font-medium">Creative</a>
+                    <a href="index.html#contact" class="bg-terracotta text-cream px-5 py-2 rounded-full hover:bg-terracotta-dark transition-colors font-medium text-center">Connect</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] pt-32 pb-16 px-6 relative overflow-hidden">
+        <div class="absolute top-20 right-0 w-96 h-96 bg-sage/20 blob-shape floating"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-terracotta/10 blob-shape-2"></div>
+        
+        <div class="max-w-6xl mx-auto relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <p class="text-sage font-semibold mb-4 tracking-wide uppercase text-sm">Portfolio</p>
+                    <h1 class="font-serif text-5xl md:text-6xl font-bold text-warm-brown leading-tight mb-6">
+                        Academic <span class="text-terracotta">Portfolio</span>
+                    </h1>
+                    <p class="text-xl text-warm-brown-light leading-relaxed">
+                        Exploring the intersections of Cognitive Science, Artificial Intelligence, and Neuroscience through research and innovation.
+                    </p>
+                </div>
+                <div class="fade-in delay-1">
+                    <img src="assets/academic/hero-conference.webp" alt="Aparna at academic conference" class="rounded-3xl organic-shadow w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Story of Light Book Section -->
+    <section class="py-20 px-6 bg-gradient-to-br from-cream to-sage/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in order-2 lg:order-1">
+                    <img src="assets/academic/book-story-of-light.webp" alt="The Story of Light - Malayalam science book" class="rounded-3xl organic-shadow w-full max-w-md mx-auto">
+                </div>
+                <div class="fade-in delay-1 order-1 lg:order-2">
+                    <span class="inline-block bg-terracotta/10 text-terracotta px-4 py-2 rounded-full text-sm font-semibold mb-6">Published Author</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-brown mb-6">The Story of Light</h2>
+                    <p class="text-lg text-warm-brown-light leading-relaxed mb-6">
+                        A comprehensive Malayalam science book exploring the fascinating world of light, optics, and their applications. Written to make complex scientific concepts accessible to readers of all ages.
+                    </p>
+                    <p class="text-warm-brown-light leading-relaxed">
+                        This book represents my passion for science communication and making knowledge accessible in regional languages.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI & Data Science Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-sage/20 text-sage px-4 py-2 rounded-full text-sm font-semibold mb-6">Research Domain</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-brown mb-6">AI & Data Science</h2>
+                <p class="text-lg text-warm-brown-light max-w-2xl mx-auto">
+                    Leveraging artificial intelligence and data-driven approaches to solve complex problems at the intersection of technology and human cognition.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/50 p-8 rounded-3xl organic-shadow card-hover fade-in">
+                    <div class="w-16 h-16 bg-terracotta/10 rounded-2xl flex items-center justify-center mb-6">
+                        <img src="assets/academic/ai-sphere.webp" alt="AI" class="w-12 h-12 object-cover rounded-xl">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-warm-brown mb-3">Machine Learning</h3>
+                    <p class="text-warm-brown-light">Developing and applying ML algorithms for pattern recognition and predictive modeling in neuroscience applications.</p>
+                </div>
+                
+                <div class="bg-white/50 p-8 rounded-3xl organic-shadow card-hover fade-in delay-1">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <img src="assets/academic/neural-network.webp" alt="Deep Learning" class="w-12 h-12 object-cover rounded-xl">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-warm-brown mb-3">Deep Learning</h3>
+                    <p class="text-warm-brown-light">Neural network architectures for brain signal processing and cognitive state classification.</p>
+                </div>
+                
+                <div class="bg-white/50 p-8 rounded-3xl organic-shadow card-hover fade-in delay-2">
+                    <div class="w-16 h-16 bg-terracotta/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-warm-brown mb-3">Natural Language Processing</h3>
+                    <p class="text-warm-brown-light">Analyzing linguistic patterns and semantic understanding for human-computer interaction.</p>
+                </div>
+                
+                <div class="bg-white/50 p-8 rounded-3xl organic-shadow card-hover fade-in">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-warm-brown mb-3">Computer Vision</h3>
+                    <p class="text-warm-brown-light">Image analysis and visual perception systems inspired by biological vision.</p>
+                </div>
+                
+                <div class="bg-white/50 p-8 rounded-3xl organic-shadow card-hover fade-in delay-1">
+                    <div class="w-16 h-16 bg-terracotta/10 rounded-2xl flex items-center justify-center mb-6">
+                        <img src="assets/academic/data-tablet.webp" alt="Data Science" class="w-12 h-12 object-cover rounded-xl">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-warm-brown mb-3">Data Science</h3>
+                    <p class="text-warm-brown-light">Statistical analysis and data visualization for extracting insights from complex datasets.</p>
+                </div>
+                
+                <div class="bg-white/50 p-8 rounded-3xl organic-shadow card-hover fade-in delay-2">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <img src="assets/academic/robotic-hands.webp" alt="Robotics" class="w-12 h-12 object-cover rounded-xl">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-warm-brown mb-3">AI Ethics & Robotics</h3>
+                    <p class="text-warm-brown-light">Responsible AI development and robotic systems for assistive technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cognitive Science Section -->
+    <section class="py-20 px-6 bg-warm-brown text-cream">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-cream/20 text-cream px-4 py-2 rounded-full text-sm font-semibold mb-6">Research Domain</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Cognitive Science</h2>
+                <p class="text-lg text-cream/80 max-w-2xl mx-auto">
+                    Understanding the mind through interdisciplinary approaches combining psychology, neuroscience, linguistics, and philosophy.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-cream/10 backdrop-blur p-6 rounded-2xl card-hover fade-in">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Consciousness</h3>
+                    <p class="text-cream/70 text-sm">Exploring the nature of conscious experience and subjective awareness.</p>
+                </div>
+                
+                <div class="bg-cream/10 backdrop-blur p-6 rounded-2xl card-hover fade-in delay-1">
+                    <div class="text-4xl mb-4">👁️</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Perception</h3>
+                    <p class="text-cream/70 text-sm">How we interpret and organize sensory information from the world.</p>
+                </div>
+                
+                <div class="bg-cream/10 backdrop-blur p-6 rounded-2xl card-hover fade-in delay-2">
+                    <div class="text-4xl mb-4">💭</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Memory</h3>
+                    <p class="text-cream/70 text-sm">Understanding how we encode, store, and retrieve information.</p>
+                </div>
+                
+                <div class="bg-cream/10 backdrop-blur p-6 rounded-2xl card-hover fade-in delay-3">
+                    <div class="text-4xl mb-4">🗣️</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Language</h3>
+                    <p class="text-cream/70 text-sm">The cognitive mechanisms underlying language acquisition and use.</p>
+                </div>
+                
+                <div class="bg-cream/10 backdrop-blur p-6 rounded-2xl card-hover fade-in">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Problem Solving</h3>
+                    <p class="text-cream/70 text-sm">Cognitive strategies for reasoning and decision making.</p>
+                </div>
+                
+                <div class="bg-cream/10 backdrop-blur p-6 rounded-2xl card-hover fade-in delay-1">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Attention</h3>
+                    <p class="text-cream/70 text-sm">Selective focus and the allocation of cognitive resources.</p>
+                </div>
+                
+                <div class="bg-cream/10 backdrop-blur p-6 rounded-2xl card-hover fade-in delay-2">
+                    <div class="text-4xl mb-4">❤️</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Emotion</h3>
+                    <p class="text-cream/70 text-sm">The role of affect in cognition and behavior.</p>
+                </div>
+                
+                <div class="bg-cream/10 backdrop-blur p-6 rounded-2xl card-hover fade-in delay-3">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Learning</h3>
+                    <p class="text-cream/70 text-sm">Mechanisms of knowledge acquisition and skill development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neuroscience Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="fade-in">
+                    <span class="inline-block bg-terracotta/10 text-terracotta px-4 py-2 rounded-full text-sm font-semibold mb-6">Research Domain</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-brown mb-6">Neuroscience</h2>
+                    <p class="text-lg text-warm-brown-light leading-relaxed mb-6">
+                        Investigating the brain's structure and function through advanced neuroimaging and electrophysiological techniques.
+                    </p>
+                    <p class="text-warm-brown-light leading-relaxed">
+                        My research focuses on understanding neural mechanisms underlying cognition and developing brain-computer interfaces for therapeutic applications.
+                    </p>
+                </div>
+                <div class="fade-in delay-1">
+                    <img src="assets/academic/brain-mri.webp" alt="Brain MRI scan" class="rounded-3xl organic-shadow w-full">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative overflow-hidden rounded-3xl organic-shadow card-hover fade-in">
+                    <img src="assets/academic/child-eeg.webp" alt="EEG research with children" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-warm-brown/90 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-cream mb-2">EEG Research</h3>
+                            <p class="text-cream/80 text-sm">Electroencephalography studies for understanding brain activity patterns.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl organic-shadow card-hover fade-in delay-1">
+                    <img src="assets/academic/eeg-cap.webp" alt="EEG cap technology" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-warm-brown/90 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-cream mb-2">Brain-Computer Interface</h3>
+                            <p class="text-cream/80 text-sm">Developing BCIs for neural rehabilitation and communication.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl organic-shadow card-hover fade-in delay-2">
+                    <img src="assets/academic/math-equations.webp" alt="Neural computation" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-warm-brown/90 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-cream mb-2">Computational Neuroscience</h3>
+                            <p class="text-cream/80 text-sm">Mathematical models of neural systems and brain function.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Gallery -->
+    <section class="py-20 px-6 bg-gradient-to-br from-sage/10 to-cream">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-brown mb-6">Research Moments</h2>
+                <p class="text-lg text-warm-brown-light max-w-2xl mx-auto">
+                    Glimpses from my academic journey — teaching, researching, and collaborating.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in">
+                    <img src="assets/academic/school-lecture.webp" alt="Lecture at school" class="w-full h-56 object-cover">
+                    <div class="bg-white/70 p-4">
+                        <p class="font-medium text-warm-brown">Science outreach and education</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in delay-1">
+                    <img src="assets/academic/plant-research.webp" alt="Research work" class="w-full h-56 object-cover">
+                    <div class="bg-white/70 p-4">
+                        <p class="font-medium text-warm-brown">Interdisciplinary research</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in delay-2">
+                    <img src="assets/academic/ramana-maharshi.webp" alt="Philosophy studies" class="w-full h-56 object-cover">
+                    <div class="bg-white/70 p-4">
+                        <p class="font-medium text-warm-brown">Philosophy of mind exploration</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in">
+                    <img src="assets/academic/3d-room-model.webp" alt="3D modeling" class="w-full h-56 object-cover">
+                    <div class="bg-white/70 p-4">
+                        <p class="font-medium text-warm-brown">3D modeling and visualization</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in delay-1">
+                    <img src="assets/academic/art-palette.webp" alt="Creative work" class="w-full h-56 object-cover">
+                    <div class="bg-white/70 p-4">
+                        <p class="font-medium text-warm-brown">Art and science fusion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-20 px-6 bg-warm-brown">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h2 class="font-serif text-4xl font-bold text-cream mb-8">Featured Talk</h2>
+            <div class="relative aspect-video rounded-3xl overflow-hidden organic-shadow">
+                <iframe 
+                    class="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/13W1F7Q4Uyo" 
+                    title="Academic presentation" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-cream border-t border-sage/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <a href="index.html" class="font-serif text-2xl font-semibold text-terracotta">Aparna RVM</a>
+                    <p class="text-warm-brown-light mt-2">Cognitive Scientist • AI Researcher • Neuro-AI Entrepreneur</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="index.html" class="text-warm-brown hover:text-terracotta transition-colors">Home</a>
+                    <a href="academic.html" class="text-terracotta">Academic</a>
+                    <a href="creative.html" class="text-warm-brown hover:text-terracotta transition-colors">Creative</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-sage/20 text-center">
+                <p class="text-warm-brown-light text-sm">© 2025 Aparna RVM. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

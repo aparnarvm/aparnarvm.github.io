@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Aparna RVM</title>
+    <meta name="description" content="Creative Portfolio of Aparna RVM - Photography, Oil Paintings, and Music (Tabla & Percussion)">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        terracotta: '#c4704a',
+                        'terracotta-dark': '#a85d3b',
+                        sage: '#9caf88',
+                        'sage-light': '#b8c9a9',
+                        cream: '#f5f0e8',
+                        'cream-dark': '#e8e0d4',
+                        'warm-brown': '#5c4033',
+                        'warm-brown-light': '#7a5a47',
+                        'teal': '#3d6b6b',
+                        'beige': '#d4c4a8',
+                    },
+                    fontFamily: {
+                        serif: ['Crimson Pro', 'Georgia', 'serif'],
+                        sans: ['Nunito', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: #f5f0e8;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239caf88' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .blob-shape { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .blob-shape-2 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        .organic-shadow { box-shadow: 0 10px 40px -10px rgba(92, 64, 51, 0.2); }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -15px rgba(92, 64, 51, 0.3);
+        }
+        
+        /* Carousel styles */
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            animation: scroll 30s linear infinite;
+        }
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .carousel-item {
+            flex-shrink: 0;
+            width: 300px;
+            margin-right: 24px;
+        }
+        
+        /* Masonry effect */
+        .masonry-item:nth-child(odd) {
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+<body class="font-sans text-warm-brown antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-sage/20">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-serif text-2xl font-semibold text-terracotta">Aparna</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-warm-brown hover:text-terracotta transition-colors font-medium">Home</a>
+                    <a href="academic.html" class="text-warm-brown hover:text-terracotta transition-colors font-medium">Academic</a>
+                    <a href="creative.html" class="text-terracotta font-medium">Creative</a>
+                    <a href="index.html#contact" class="bg-terracotta text-cream px-5 py-2 rounded-full hover:bg-terracotta-dark transition-colors font-medium">Connect</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-warm-brown">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-sage/20 pt-4">
+                <div class="flex flex-col gap-4">
+                    <a href="index.html" class="text-warm-brown hover:text-terracotta transition-colors font-medium">Home</a>
+                    <a href="academic.html" class="text-warm-brown hover:text-terracotta transition-colors font-medium">Academic</a>
+                    <a href="creative.html" class="text-terracotta font-medium">Creative</a>
+                    <a href="index.html#contact" class="bg-terracotta text-cream px-5 py-2 rounded-full hover:bg-terracotta-dark transition-colors font-medium text-center">Connect</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] pt-32 pb-16 px-6 relative overflow-hidden">
+        <div class="absolute top-20 right-0 w-96 h-96 bg-terracotta/10 blob-shape floating"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-sage/20 blob-shape-2"></div>
+        
+        <div class="max-w-6xl mx-auto relative">
+            <div class="text-center fade-in">
+                <p class="text-terracotta font-semibold mb-4 tracking-wide uppercase text-sm">Portfolio</p>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-warm-brown leading-tight mb-6">
+                    Creative <span class="text-terracotta">Portfolio</span>
+                </h1>
+                <p class="text-xl text-warm-brown-light max-w-2xl mx-auto">
+                    Where art meets soul — exploring the world through photography, oil paintings, and the rhythms of Indian classical music.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Section -->
+    <section class="py-20 px-6 bg-gradient-to-br from-cream to-sage/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-sage/20 text-sage px-4 py-2 rounded-full text-sm font-semibold mb-6">Visual Art</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-brown mb-6">Photography</h2>
+                <p class="text-lg text-warm-brown-light max-w-2xl mx-auto">
+                    Capturing moments that speak — from the vibrant streets of India to intimate portraits that reveal the soul.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in masonry-item">
+                    <img src="assets/creative/photo-holi.webp" alt="Holi festival celebration" class="w-full h-72 object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in delay-1 masonry-item">
+                    <img src="assets/creative/photo-indian-child.webp" alt="Indian child portrait" class="w-full h-72 object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in delay-2 masonry-item">
+                    <img src="assets/creative/photo-rickshaw-bw.webp" alt="Rickshaw black and white" class="w-full h-72 object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden organic-shadow card-hover fade-in delay-3 masonry-item">
+                    <img src="assets/creative/photo-silhouette-women.webp" alt="Silhouette of women" class="w-full h-72 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oil Paintings Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-terracotta/10 text-terracotta px-4 py-2 rounded-full text-sm font-semibold mb-6">Visual Art</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-brown mb-6">Oil Paintings</h2>
+                <p class="text-lg text-warm-brown-light max-w-2xl mx-auto">
+                    Expressions on canvas — each stroke a meditation, each color a feeling.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="rounded-3xl overflow-hidden organic-shadow card-hover fade-in">
+                    <img src="assets/creative/oil-huddled-blue.webp" alt="Huddled figure - blue tones" class="w-full h-80 object-cover">
+                    <div class="bg-white/70 p-4">
+                        <p class="font-serif text-lg font-medium text-warm-brown">Contemplation</p>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden organic-shadow card-hover fade-in delay-1">
+                    <img src="assets/creative/oil-red-hands.webp" alt="Red hands painting" class="w-full h-80 object-cover">
+                    <div class="bg-white/70 p-4">
+                        <p class="font-serif text-lg font-medium text-warm-brown">Expression</p>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden organic-shadow card-hover fade-in delay-2">
+                    <img src="assets/creative/art-drowning-wine.webp" alt="Abstract art" class="w-full h-80 object-cover">
+                    <div class="bg-white/70 p-4">
+                        <p class="font-serif text-lg font-medium text-warm-brown">Emotion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wide Gallery / Carousel Section -->
+    <section class="py-20 bg-warm-brown overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 mb-12 fade-in">
+            <h2 class="font-serif text-4xl font-bold text-cream text-center mb-4">Gallery</h2>
+            <p class="text-cream/70 text-center">A visual journey through moments and memories</p>
+        </div>
+        
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- First set of images -->
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-autumn-leaves.webp" alt="Autumn leaves" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-cyclist.webp" alt="Cyclist" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-drums.webp" alt="Drums" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-huddled.webp" alt="Huddled figure" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-red-portrait.webp" alt="Red portrait" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-tabla.webp" alt="Tabla" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-1.webp" alt="Creative work 1" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-2.webp" alt="Creative work 2" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-3.webp" alt="Creative work 3" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-4.webp" alt="Creative work 4" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-5.webp" alt="Creative work 5" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-6.webp" alt="Creative work 6" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <!-- Duplicate set for infinite scroll effect -->
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-autumn-leaves.webp" alt="Autumn leaves" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-cyclist.webp" alt="Cyclist" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-drums.webp" alt="Drums" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-huddled.webp" alt="Huddled figure" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-red-portrait.webp" alt="Red portrait" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/carousel-tabla.webp" alt="Tabla" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-1.webp" alt="Creative work 1" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-2.webp" alt="Creative work 2" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-3.webp" alt="Creative work 3" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-4.webp" alt="Creative work 4" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-5.webp" alt="Creative work 5" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/creative/wide-6.webp" alt="Creative work 6" class="w-full h-64 object-cover rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Videos Section -->
+    <section class="py-20 px-6 bg-gradient-to-br from-sage/10 to-cream">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-teal/20 text-teal px-4 py-2 rounded-full text-sm font-semibold mb-6">Performances</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-warm-brown mb-6">Music & Performances</h2>
+                <p class="text-lg text-warm-brown-light max-w-2xl mx-auto">
+                    The rhythm of tabla, the melody of santoor — expressions of the soul through music.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- YouTube Video 1 -->
+                <div class="fade-in">
+                    <div class="relative aspect-video rounded-3xl overflow-hidden organic-shadow">
+                        <iframe 
+                            class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/7ajw2bmC2c4" 
+                            title="Music performance 1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- YouTube Video 2 -->
+                <div class="fade-in delay-1">
+                    <div class="relative aspect-video rounded-3xl overflow-hidden organic-shadow">
+                        <iframe 
+                            class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/aSuyziOjSUQ" 
+                            title="Music performance 2" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Local Video - Santoor Performance -->
+            <div class="max-w-4xl mx-auto fade-in delay-2">
+                <h3 class="font-serif text-2xl font-bold text-warm-brown text-center mb-6">With Hari Sir on Santoor 🤍</h3>
+                <div class="relative aspect-video rounded-3xl overflow-hidden organic-shadow">
+                    <video 
+                        class="w-full h-full object-cover"
+                        controls
+                        poster="assets/creative/carousel-tabla.webp">
+                        <source src="assets/creative/santoor-performance.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla & Drums Portfolio Section -->
+    <section class="py-20 px-6 bg-[#2d2d2d]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl md:text-5xl italic font-bold text-teal mb-4">Tabla & Drums Portfolio</h2>
+                <div class="w-16 h-0.5 bg-teal mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-0 max-w-5xl mx-auto fade-in">
+                <!-- Left side - Profile -->
+                <div class="bg-[#3a3a3a] p-8 lg:p-12">
+                    <div class="text-center mb-8">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-beige/20">
+                            <img src="assets/creative/carousel-tabla.webp" alt="Aparna playing tabla" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-serif text-3xl font-bold text-cream tracking-wider mb-2">APARNA R V M</h3>
+                        <p class="text-beige">Musician / Percussionist</p>
+                    </div>
+                    
+                    <div class="border-t border-beige/30 pt-6">
+                        <h4 class="font-serif text-xl font-bold text-cream mb-4 text-center">About Me</h4>
+                        <p class="text-cream/80 text-sm leading-relaxed text-justify">
+                            With over a decade dedicated to mastering the tabla under the guidance of maestros like Prakash Vengeri Sir, Ustad Rafiyuddin Sabri and Anubratha Chatterjee, I've immersed myself in a symphony of rhythms. My journey in Carnatic music commenced at the age of three, and beyond the tabla, I play drums, violin, thakil, dhol, and love experimenting with konnakol.
+                        </p>
+                        <p class="text-cream/80 text-sm leading-relaxed mt-4 text-justify">
+                            My pursuit extends beyond mastery; I seek to compose and experiment with Hindustani, Carnatic and Fusion music.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 space-y-3">
+                        <div class="flex items-center gap-3 text-cream/70">
+                            <svg class="w-5 h-5 text-pink-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/><circle cx="12" cy="12" r="3.5"/></svg>
+                            <span class="text-sm">apoorsansar</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-cream/70">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <span class="text-sm">aparnarvmd@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-cream/70">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <span class="text-sm">Kerala | Delhi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right side - Details -->
+                <div class="bg-beige p-8 lg:p-12">
+                    <div class="mb-8">
+                        <h4 class="font-serif text-2xl font-bold text-[#2d2d2d] mb-4 border-b-2 border-[#2d2d2d] pb-2">Collaborations</h4>
+                        <ul class="space-y-3 text-[#2d2d2d]/80">
+                            <li class="font-medium">Accompanying artist for Hindustani Classical music - Tabla</li>
+                            <li class="font-medium">Accompaniment with ghazals and qawwalis</li>
+                            <li class="font-medium">Freelance performer for music bands - Tabla, dhol, drums, thakil and other percussions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="font-serif text-2xl font-bold text-[#2d2d2d] mb-4 border-b-2 border-[#2d2d2d] pb-2">Achievements</h4>
+                        <ul class="space-y-3 text-[#2d2d2d]/80">
+                            <li class="font-medium">Five time Kerala State Kalolsavam winner in Tabla 2014-'19</li>
+                            <li class="font-medium">Recorded a song in film Poomaram</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="font-serif text-2xl font-bold text-teal mb-4 border-b-2 border-teal pb-2">Music Genres</h4>
+                        <ul class="space-y-2 text-[#2d2d2d]/80">
+                            <li class="font-medium">Hindustani music</li>
+                            <li class="font-medium">Carnatic music</li>
+                            <li class="font-medium">Fusion music</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Performance image -->
+                    <div class="rounded-2xl overflow-hidden">
+                        <img src="assets/creative/wide-4.webp" alt="Group performance" class="w-full h-48 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-cream border-t border-sage/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <a href="index.html" class="font-serif text-2xl font-semibold text-terracotta">Aparna RVM</a>
+                    <p class="text-warm-brown-light mt-2">Cognitive Scientist • AI Researcher • Neuro-AI Entrepreneur</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="index.html" class="text-warm-brown hover:text-terracotta transition-colors">Home</a>
+                    <a href="academic.html" class="text-warm-brown hover:text-terracotta transition-colors">Academic</a>
+                    <a href="creative.html" class="text-terracotta">Creative</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-sage/20 text-center">
+                <p class="text-warm-brown-light text-sm">© 2025 Aparna RVM. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
